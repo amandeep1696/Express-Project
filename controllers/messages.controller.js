@@ -2,9 +2,14 @@ const path = require('path');
 
 function getMessages(req, res) {
   // res.send('<ul><li>Hello Albert</li></ul>');
-  res.sendFile(
-    path.join(__dirname, '..', 'public', 'images', 'skimountain.webp')
-  );
+  // res.sendFile(
+  //   path.join(__dirname, '..', 'public', 'images', 'skimountain.webp')
+  // );
+
+  res.render('messages', {
+    title: 'Messages to my friends',
+    friend: 'Elon musk',
+  });
 }
 
 function postMessage(req, res) {
